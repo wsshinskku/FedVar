@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Please cite the FedVar paper when using this software."
+title: "FedVar: Federated Learning Algorithm with Weight Variation in Clients"
+type: software
+version: 0.2.0
+authors:
+  - family-names: Shin
+    given-names: Wooseok
+  - family-names: Shin
+    given-names: Jitae
+repository-code: https://github.com/wsshinskku/FedVar
+preferred-citation:
+  type: conference-paper
+  title: "FedVar: Federated Learning Algorithm with Weight Variation in Clients"
+  authors:
+    - family-names: Shin
+      given-names: Wooseok
+    - family-names: Shin
+      given-names: Jitae
+  year: 2022
+  conference:
+    name: "37th International Technical Conference on Circuits/Systems, Computers and Communications (ITC-CSCC)"
+  start: 456
+  end: 459
+  doi: 10.1109/ITC-CSCC55581.2022.9894899

@@ -1,0 +1,19 @@
+name: Tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install -e '.[dev]'
+      - run: ruff check .
+      - run: pytest -q
+      - run: fedvar train --config configs/smoke.json --output runs/ci
+      - run: fedvar evaluate --checkpoint runs/ci/checkpoint.pt

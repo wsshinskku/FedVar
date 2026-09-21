@@ -1,0 +1,7 @@
+{
+  "dataset": "mnist", "model": "cnn", "seed": 7,
+  "clients": 100, "clients_per_round": 10, "rounds": 200,
+  "local_epochs": 5, "batch_size": 50, "learning_rate": 0.01,
+  "partition": "dirichlet", "dirichlet_alpha": 0.5,
+  "evaluate_every": 20, "device": "cpu", "download": false
+}
